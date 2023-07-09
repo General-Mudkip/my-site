@@ -1,9 +1,28 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
 
+const allPosts = await Astro.glob("./posts/*.md")
+
 const pageTitle="Ramblings"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+	<h2>If for whatever reason you want to listen to my opinion.</h2>
+
+	<div class="mt-4">
+		<p>list of said ramblings:</p>
+		<ul class="list-disc ml-7">
+			{
+				allPosts
+					.sort((a,b) => new Date(b.frontmatter.pubDate) as any - (new Date(a.frontmatter.pubDate) as any))
+					.map((post) => 
+					<li>
+						<a href={post.url}>
+							<span class="underline">{post.frontmatter.title}</span> [{post.frontmatter.pubDate}]
+						</a>
+					</li>
+				)
+			}
+		</ul>
+	</div>
 </BaseLayout>
