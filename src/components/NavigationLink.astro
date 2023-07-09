@@ -12,6 +12,6 @@ const pathIsHome = strippedPath === "";
 const isActive = pathContainsHref || (pathIsHome && name==="./home")
 ---
 
-<a class={`block text-center p-2 text-xl ${isActive ? "text-white underline decoration-2" : "text-slate-300 hover:underline hover:decoration-2"} transition-all duration-200`} href={href}>
+<a class={`block p-2 text-xl ${isActive ? "text-white underline decoration-2" : "text-slate-300 hover:underline hover:decoration-2"} transition-all duration-200`} href={href}>
     {name}
 </a>
