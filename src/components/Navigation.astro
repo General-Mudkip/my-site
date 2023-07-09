@@ -1,0 +1,11 @@
+---
+import '../styles/global.css';
+import NavigationLink from './NavigationLink.astro';
+
+const currentPath = Astro.url.pathname;
+---
+<div class="flex flex-row flex-wrap justify-center gap-2 w-96 bg-zinc-950 outline outline-4 outline-white rounded-b-xl">
+    <NavigationLink name="./home" href="/" />
+    <NavigationLink name="./about" href="/about" />
+    <NavigationLink name="./ramblings" href="/ramblings" />
+</div>

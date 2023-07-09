@@ -1,0 +1,14 @@
+<span id="asdf">
+    <script>
+        let ageEl = document.querySelector('#asdf');
+        setInterval(() => {
+            let time = (new Date() as any - (new Date(1142469000000) as any)) / 1000 * 60 * 60 * 24 * 365.25
+            let timeAsString = time.toString().substring(0,12);
+            let result = timeAsString.substring(0, 2) + "." + timeAsString.substring(2,timeAsString.length)
+
+            if(ageEl) {
+                ageEl.innerText = result
+            }
+        }, 30)
+    </script>
+</span>
