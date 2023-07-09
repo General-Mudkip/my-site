@@ -1,14 +1,18 @@
-<span id="asdf">
+<span id="asdf" class="font-bold">
     <script>
         let ageEl = document.querySelector('#asdf');
         setInterval(() => {
-            let time = (new Date() as any - (new Date(1142469000000) as any)) / 1000 * 60 * 60 * 24 * 365.25
-            let timeAsString = time.toString().substring(0,12);
-            let result = timeAsString.substring(0, 2) + "." + timeAsString.substring(2,timeAsString.length)
+            const birthTimestamp = 1142469000000; // Unix timestamp in milliseconds
+            const currentTimestamp = Date.now();
 
-            if(ageEl) {
-                ageEl.innerText = result
+            const millisecondsPerYear = 31536000000; // Approximate number of milliseconds in a year
+            const yearsElapsed = (currentTimestamp - birthTimestamp) / millisecondsPerYear;
+
+            const formattedAge = yearsElapsed.toFixed(12).slice(0, 12);
+
+            if (ageEl) {
+                ageEl.innerText = formattedAge;
             }
-        }, 30)
+        }, 30);
     </script>
 </span>
