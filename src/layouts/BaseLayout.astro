@@ -9,7 +9,6 @@ const { pageTitle } = Astro.props;
     <style>
       html {
         background: #040A0A;
-        visibility: hidden; /* Hide the page initially */
       }
     </style>
 
@@ -19,17 +18,7 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 
-    <script>
-      // Show the page after CSS has finished loading
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-          document.documentElement.style.visibility = 'visible';
-        });
-      } else {
-        document.documentElement.style.visibility = 'visible';
-      }
-    </script>
-    
+    <link href="../styles/global.css" rel="stylesheet" rel="preload" as="style" />
   </head>
 
   <body class="bg-[#040A0A] min-h-screen min-w-screen flex flex-col items-center">
@@ -46,27 +35,3 @@ const { pageTitle } = Astro.props;
   </body>
   
 </html>
-
-<style>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  :root {
-    --foreground-rgb: 243, 247, 252;
-    --background-start-rgb: 4, 10, 10;
-    --background-end-rgb: 4, 10, 10;
-
-    @apply font-mono
-  }
-
-  body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-  }
-</style>
