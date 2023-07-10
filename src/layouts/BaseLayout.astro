@@ -1,7 +1,6 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/global.css';
 const { pageTitle } = Astro.props;
 ---
 
@@ -34,3 +33,27 @@ const { pageTitle } = Astro.props;
   </body>
   
 </html>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  :root {
+    --foreground-rgb: 243, 247, 252;
+    --background-start-rgb: 4, 10, 10;
+    --background-end-rgb: 4, 10, 10;
+
+    @apply font-mono
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  }
+</style>
