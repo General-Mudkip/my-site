@@ -9,6 +9,7 @@ const { pageTitle } = Astro.props;
     <style>
       html {
         background: #040A0A;
+        visibility: hidden; /* Hide the page initially */
       }
     </style>
 
@@ -17,17 +18,29 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+
+    <script>
+      // Show the page after CSS has finished loading
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          document.documentElement.style.visibility = 'visible';
+        });
+      } else {
+        document.documentElement.style.visibility = 'visible';
+      }
+    </script>
+    
   </head>
 
   <body class="bg-[#040A0A] min-h-screen min-w-screen flex flex-col items-center">
     <main class="inline-flex flex-col w-full h-full items-center">
       <Header />
-  
+
       <div class="mt-12 mx-8 w-auto max-w-[36rem] p-8 border-white border-2 inline rounded-xl align-middle bg-zinc-950 md:w-[36rem]">
         <h1 class="text-4xl font-bold">{pageTitle}</h1>
         <slot />
       </div>
-  
+
       <Footer />
     </main>
   </body>
