@@ -10,7 +10,7 @@ pubDate: "2023-07-09"
 
 <br>
 
-"An idiot admires complexity, a genius admires simplicity. A physicist tries to make it simple. Anyway, an idiot, anything more complicated it is, the more he will admire it. If you make something so clusterfucked he can't understand it, he's gonna think you're a god."
+"An idiot admires complexity, a genius admires simplicity. A physicist tries to make it simple. Anyway, an idiot, anything the more complicated it is, the more he will admire it. If you make something so clusterfucked he can't understand it, he's gonna think you're a god."
 <br>- Terry Davis
 
 <br>
