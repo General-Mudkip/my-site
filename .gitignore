@@ -12,6 +12,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+#lazygit
+lazygit
+lazygit.tar.gz
 
 # environment variables
 .env
