@@ -1,9 +1,52 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Mhr from "../components/Mhr.astro";
+import List from "../components/List.astro";
 
 const pageTitle = "About"
 ---
 
 <BaseLayout pageTitle="About">
-    No one special.
+    <p>
+        Hey there. If you want to be extra creepy, here's some info about me. Just kidding. Kinda.
+    </p>
+
+    <Mhr />
+
+    <h2 class="text-3xl">Contact</h2>
+    <p class="text-slate-200 italic mb-2 -mt-1 text-sm">Want to contact me for whatever reason?</p>
+    <ul class="list-disc ml-6">
+        <li>Discord: general.mudkip</li>
+        <li>Email: bence@mudkip.live</li>
+        <li>GitHub: <a class="underline" href="https://github.com/General-Mudkip">General-Mudkip</a></li>
+    </ul>
+
+    <Mhr />
+
+    <h2 class="text-3xl">Stack</h2>
+    <p class="text-slate-200 italic mb-2 -mt-1 text-sm">Hoping this isn't a Dunning-Kruger situation.</p>
+
+    <div class="flex flex-row">
+        <List title="Beginner" items={["Javascript", "TypeScript", "Tailwind", "Astro", "React", "Next.js"]} />
+
+        <List title="Intermediate" items={["HTML", "CSS", "Python"]} />
+
+        <List title="Advanced" items={["None!"]} />
+    </div>
+
+    <p class="mt-4"></p> Once I'm more comfortable with React and TS, I'd probably like to get to know Rust and/or Kotlin, as they seem like pretty awesome languages.</p>
+
+    <Mhr />
+
+    <div>
+        <h3 class="text-3xl">Things</h3>
+        <p class="text-slate-200 italic mb-2 -mt-1 text-sm">Stuff I use on a daily basis. Maybe I need to learn Neovim.</p>
+        
+        <div class="flex flex-row">
+            <List title="Programs" items={["VSCode", "Firefox", "Discord", "Spotify", "Obsidian"]} />
+            <List title="Tech" items={["Nothing interesting."]} />
+            <List title="Hardware" items={["Intel i5-12600K", "RX 7900 XT", "2x Monitors"]} />
+        </div>
+        
+    </div>
 </BaseLayout>
