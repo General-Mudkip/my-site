@@ -1,0 +1,12 @@
+---
+const { title, items } = Astro.props;
+---
+
+<div class="grow">
+    <h3 class="text-xl">{title}</h3>
+    <ul class="list-disc ml-6">
+        {items.map((item: any) => (
+            <li>{item}</li>
+        ))}
+    </ul>
+</div>
