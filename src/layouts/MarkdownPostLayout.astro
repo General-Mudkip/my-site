@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props;
         <p>{frontmatter.pubDate.slice(0,10)}</p>
         <p class="text-slate-300 italic">{frontmatter.description}</p>
 
-        <div class="prose prose-white mt-8 text-white prose-h1:text-2xl ">
+        <div class="prose mt-8 text-white prose-h1:text-2xl ">
             <slot />
         </div>
         

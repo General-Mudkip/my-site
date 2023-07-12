@@ -38,3 +38,6 @@ After spending the better part of 6 hours installing Ubuntu, Vim, Choco, and 1.6
 
 ## Now 
 Now all that's left to do is just get used to it I suppose. My remaps may not work, the Astro LSP isn't really doing anything, Tailwind seems to hate me, and my markdown files aren't formatting properly, but at my code looks good. (Sans the lack of syntax highlighting.) I also need to figure out how to actually commit and push this thing. Welp.
+
+## Update (2023-07-12)
+Progress has definitely been made. I've got the Astro syntax highlighting working and the LSP (hopefully) working thanks to [some awesome config files](https://github.com/nikolovlazar/dotfiles) I found online. Granted, I've since broken my LSP keymappings and some things are a tad wack but I'm starting to get used to stuff. Can even open a terminal now. Awesome. Oh, and I got GitHub CoPilot working.

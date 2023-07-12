@@ -1,19 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-      typography: ({theme}) => ({
-        white: {
+  theme: {
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
           css: {
-            "--tw-prose-body": theme("colors.white"),
-            "--tw-prose-headings": theme("colors.white")
-          }
-        }
-      })
+            h2: {
+              color: theme("colors.white"),
+            },
+            a: {
+              color: theme('colors.white'),
+              textDecoration: 'underline',
+            },
+          },
+        },
+      }),
     },
-	},
-	plugins: [
+  },
+
+  plugins: [
     require('@tailwindcss/typography'),
   ],
 }
